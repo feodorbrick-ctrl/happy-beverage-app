@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4d7f8542-fe54-45b6-baf0-fd255822268e" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2xDp3ts3UEYxhJCpyQj6A8MTbDp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Node.js.index.js.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.index.jsm.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.myPlay.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/user/WebstormProjects/happyBeverageApp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/user/AppData/Roaming/JetBrains/WebStorm2025.1/node/versions/22.15.1/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="index.jsm" type="NodeJSConfigurationType" temporary="true" path-to-node="$APPLICATION_CONFIG_DIR$/node/versions/22.15.1/node" path-to-js-file="index.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.index.jsm" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-WS-251.23774.424" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4d7f8542-fe54-45b6-baf0-fd255822268e" name="Changes" comment="" />
+      <created>1747482303436</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747482303436</updated>
+      <workItem from="1747482304483" duration="4942000" />
+      <workItem from="1747487960250" duration="8000" />
+      <workItem from="1747488259419" duration="185000" />
+      <workItem from="1747499867307" duration="4000" />
+      <workItem from="1747500451593" duration="46000" />
+      <workItem from="1747500551628" duration="61000" />
+      <workItem from="1747500626660" duration="2000" />
+      <workItem from="1747500637761" duration="2000" />
+      <workItem from="1747500819081" duration="103000" />
+      <workItem from="1747501102920" duration="1000" />
+      <workItem from="1747553628596" duration="460000" />
+      <workItem from="1747556134572" duration="68000" />
+      <workItem from="1747556212225" duration="49000" />
+      <workItem from="1747838009868" duration="43000" />
+      <workItem from="1747838061410" duration="1511000" />
+      <workItem from="1747842788351" duration="59000" />
+      <workItem from="1748794793660" duration="4000" />
+      <workItem from="1752414889944" duration="1691000" />
+      <workItem from="1752588557228" duration="2953000" />
+      <workItem from="1752668274671" duration="2318000" />
+      <workItem from="1752733275154" duration="2903000" />
+      <workItem from="1752737325289" duration="9000" />
+      <workItem from="1752737357750" duration="2000" />
+      <workItem from="1752738117596" duration="2247000" />
+      <workItem from="1752849928549" duration="2000" />
+      <workItem from="1753536475719" duration="3000" />
+      <workItem from="1754292291733" duration="4000" />
+      <workItem from="1754467477110" duration="4000" />
+      <workItem from="1756023853067" duration="13000" />
+      <workItem from="1768737783399" duration="5000" />
+      <workItem from="1787052906801" duration="57000" />
+      <workItem from="1787053245446" duration="35000" />
+      <workItem from="1787053336418" duration="22000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
