@@ -1,6 +1,6 @@
 export default class Beverage {
     description = 'Unknow Beverage'
-    magnitude = 'medium'
+    magnitude = 'Medium'
 
     getDescription() {
         return this.description;
