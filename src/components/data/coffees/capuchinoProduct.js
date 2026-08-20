@@ -1,9 +1,9 @@
 import Beverage from '../abstractBeverage';
 
-export default class espresso extends Beverage {
+export default class cappuccino extends Beverage {
     constructor() {
         super();
-        this.description = 'espresso'
+        this.description = 'cappuccino'
     }
 
     setMagnitude (magnitude) {

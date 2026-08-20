@@ -1,0 +1,12 @@
+.Product li {
+    height: fit-content;
+}
+
+.Product button {
+    width: 100%;
+    height: fit-content;
+    border: none;
+    background-color: rgba(0,0,0,0);
+    cursor: pointer;
+    font-size: 150%;
+}
