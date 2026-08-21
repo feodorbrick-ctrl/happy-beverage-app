@@ -1,12 +1,14 @@
-import React from 'react';
-import cl from './condimentsList.css'
+import React, {useEffect} from 'react';
+import cl from './condimentsList.module.css'
+import CondimentZone from "./condimentZone/condimentZone";
+import Mocha from "../../../data/condimentsToCoffee/Mocha";
 
-const condimentsList = () => {
+const CondimentsList = () => {
     return (
         <div className={cl.condimentsList}>
-
+            <CondimentZone condimentName='Mocha' condiment={Mocha} />
         </div>
     );
 };
 
-export default condimentsList;
+export default CondimentsList;

@@ -1,0 +1,13 @@
+.condimentsList {
+    width: 20%;
+    height: 45vh;
+    display: grid;
+    padding: 5px;
+    border: 3px solid #E4D6A9;
+    background-color: #F1E2D1;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    border-radius: 20px;
+}

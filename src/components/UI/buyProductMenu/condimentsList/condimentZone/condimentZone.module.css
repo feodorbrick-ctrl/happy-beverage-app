@@ -1,0 +1,35 @@
+.condimentZone {
+    width: 100%;
+    height: fit-content;
+    padding: 2%;
+    box-sizing: border-box;
+    background-color: #DCC3AA;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    transition: all 0.2s;
+}
+
+.condimentZone:active {
+    transform: scale(1.01) rotateX(1grad);
+}
+
+.condimentName p {
+    width: 96%;
+    padding: 2px;
+}
+
+.condimentManagementBtn {
+    width: 35%;
+    margin: 10px 4%;
+    height: fit-content;
+    background-color: #E4D6A9;
+    border-radius: 5px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    border: none;
+    cursor: pointer;
+}
+
+.condimentManagementBtn:hover {
+    filter: brightness(0.9);
+}
