@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 import cl from './condimentZone.module.css'
 
-const CondimentZone = ({condimentName, condiment, condimentsToProduct = [], setCondimentsToProduct}) => {
+const CondimentZone = ({condimentName, condiment, condimentsToProduct = []}) => {
     const [numberOfCondiment, setNumberOfCondiment] = useState(0)
     function addCondiment() {
-        if (numberOfCondiment !== 3) {
+        if (numberOfCondiment !== 2) {
             setNumberOfCondiment(numberOfCondiment + 1)
-            setCondimentsToProduct([...condimentsToProduct, condiment])
+            condimentsToProduct.push(condiment)
         }
     }
     function removeCondiment() {
@@ -14,7 +14,7 @@ const CondimentZone = ({condimentName, condiment, condimentsToProduct = [], setC
             setNumberOfCondiment(numberOfCondiment - 1)
             const iOfCondiment = condimentsToProduct.indexOf(condiment)
             if (iOfCondiment !== -1) {
-                setCondimentsToProduct(condimentsToProduct.slice(iOfCondiment, 1))
+                condimentsToProduct.splice(iOfCondiment, 1)
             }
         }
     }

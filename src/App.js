@@ -1,13 +1,11 @@
 import './App.css';
-import NavigateMenu from "./components/UI/NavigateMenu/navigateMenu";
-import BuyProductMenu from "./components/UI/buyProductMenu/buyProductMenu";
+import AppRouter from "./components/AppRouter";
 
 
 function App() {
     return (
         <div className="App">
-            <NavigateMenu/>
-            <BuyProductMenu/>
+            <AppRouter/>
         </div>
     );
 }
