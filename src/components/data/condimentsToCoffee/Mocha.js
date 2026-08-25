@@ -1,4 +1,4 @@
-import CondimentDecorator from "../anstractCondimentDecorator";
+import CondimentDecorator from "../condimentDecorator";
 
 export default class Mocha extends CondimentDecorator {
     constructor(beverage) {

@@ -1,4 +1,4 @@
-import Beverage from '../abstractBeverage';
+import Beverage from '../beverage';
 
 export default class americano extends Beverage {
     constructor() {
