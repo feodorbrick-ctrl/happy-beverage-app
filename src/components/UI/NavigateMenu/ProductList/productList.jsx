@@ -3,15 +3,12 @@ import './productList.module.css'
 import {CoffeeRegistry} from "../../../data/coffeeRegistry";
 import ProductZone from "./ProductZone/ProductZone";
 
-const ProductList = () => {
-
+const ProductList = ({callback}) => {
     return (
         <ul>
-            <ProductZone coffee={CoffeeRegistry.espresso} />
-            <ProductZone coffee={CoffeeRegistry.americano} />
-            <ProductZone coffee={CoffeeRegistry.latte} />
-            <ProductZone coffee={CoffeeRegistry.cappuccino} />
-            <ProductZone coffee={CoffeeRegistry.frappuccino} />
+            {Object.values(CoffeeRegistry).map((coffee) =>
+                <ProductZone coffee={coffee} key={coffee.getDescription()} callback={callback} />
+            )}
         </ul>
     );
 };

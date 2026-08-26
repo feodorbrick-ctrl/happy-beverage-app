@@ -6,26 +6,14 @@ import {CondimentsRegistry} from '../../../data/condimentsRegistry'
 const CondimentsList = ({switchedCondiments}) => {
     return (
         <div className={cl.condimentsList}>
-            <CondimentZone
-                condimentName='Mocha'
-                condiment={CondimentsRegistry.mocha}
-                condimentsToProduct={switchedCondiments}
-            />
-            <CondimentZone
-                condimentName='Sugar'
-                condiment={CondimentsRegistry.sugar}
-                condimentsToProduct={switchedCondiments}
-            />
-            <CondimentZone
-                condimentName='Chocolate'
-                condiment={CondimentsRegistry.chocolate}
-                condimentsToProduct={switchedCondiments}
-            />
-            <CondimentZone
-                condimentName='WhippedCream'
-                condiment={CondimentsRegistry.whippedCream}
-                condimentsToProduct={switchedCondiments}
-            />
+            {Object.values(CondimentsRegistry).map((condiment) =>
+                <CondimentZone
+                    condimentName={condiment.name}
+                    condimentsToProduct={switchedCondiments}
+                    condiment={condiment}
+                    key={condiment.name}
+                />
+            )}
         </div>
     );
 };

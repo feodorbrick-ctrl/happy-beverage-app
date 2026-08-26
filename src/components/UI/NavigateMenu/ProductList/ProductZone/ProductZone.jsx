@@ -1,12 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import cl from './ProductZone.module.css'
+import Context from "../../../../../index";
+import {useNavigate} from "react-router-dom";
 
-const ProductZone = ({coffee}) => {
+const ProductZone = ({coffee, callback}) => {
+    const {setSwitchedBeverage} = useContext(Context)
+    const navigator = useNavigate();
     return (
         <li className={cl.Product}>
             <button
                 className={cl.Product}
-                onClick={() => console.log(coffee.getMagnitude() + ' ' + coffee.getDescription() + ' is buy on ' + coffee.cost() + '$')}
+                onClick={() => callback(coffee, setSwitchedBeverage, navigator)}
             >
                 {coffee.getDescription()}
             </button>
