@@ -30,3 +30,5 @@ root.render(
         </React.StrictMode>
     </BrowserRouter>
 );
+
+export default Context;
