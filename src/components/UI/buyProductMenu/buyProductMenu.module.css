@@ -7,9 +7,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
 }
 
 .coffeeImg {
-    width: 40vw;
-    height: 50vw;
+    width: 70vh;
+    height: 90vh;
+    border-radius: 20px;
+}
+
+.cupAndHisName {
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+.beverageNameText {
+    font-size: 50px;
+}
+
+
+@media (max-width: 1450px) {
+    .productZone {
+        display: grid;
+        justify-items: center;
+        justify-content: normal;
+    }
 }
