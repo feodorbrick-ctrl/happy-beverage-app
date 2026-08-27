@@ -8,7 +8,6 @@ const CondimentsList = ({switchedCondiments, setSwitchedCondiments}) => {
         <div className={cl.condimentsList}>
             {Object.values(CondimentsRegistry).map((condiment) =>
                 <CondimentZone
-                    condimentName={condiment.name}
                     condimentsToProduct={switchedCondiments}
                     setSwitchedCondiments={setSwitchedCondiments}
                     condiment={condiment}

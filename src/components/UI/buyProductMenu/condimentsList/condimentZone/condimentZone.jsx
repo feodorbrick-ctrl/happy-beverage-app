@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import cl from './condimentZone.module.css'
 
-const CondimentZone = ({condimentName, condiment, condimentsToProduct = [], setSwitchedCondiments}) => {
+const CondimentZone = ({condiment, condimentsToProduct = [], setSwitchedCondiments}) => {
     const [numberOfCondiment, setNumberOfCondiment] = useState(0)
+    const condimentToUse = new condiment()
     function addCondiment() {
         if (numberOfCondiment !== 2) {
             const finalCondiment = [...condimentsToProduct]
@@ -22,9 +23,11 @@ const CondimentZone = ({condimentName, condiment, condimentsToProduct = [], setS
             }
         }
     }
+
     return (
         <div className={cl.condimentZone}>
-            <p className={cl.condimentName}>{condimentName}</p>
+            <h2 className={cl.condimentName}>{condimentToUse.cost()}&euro;</h2>
+            <p className={cl.condimentName}>{condiment.name}</p>
             <p>{numberOfCondiment}</p>
             <button onClick={addCondiment} className={cl.condimentManagementBtn}>add condiment</button>
             <button onClick={removeCondiment} className={cl.condimentManagementBtn}>delete condiment</button>
