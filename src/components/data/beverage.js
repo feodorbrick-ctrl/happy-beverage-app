@@ -10,5 +10,7 @@ export default class Beverage {
         return this.magnitude;
     }
 
-    cost() {}
+    cost() {
+        return 0
+    }
 }

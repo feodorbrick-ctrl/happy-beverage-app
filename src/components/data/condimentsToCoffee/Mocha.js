@@ -1,7 +1,8 @@
 import CondimentDecorator from "../condimentDecorator";
+import Beverage from "../beverage";
 
 export default class Mocha extends CondimentDecorator {
-    constructor(beverage) {
+    constructor(beverage = new Beverage) {
         super();
         this.beverage = beverage
     }
