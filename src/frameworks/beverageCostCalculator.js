@@ -6,8 +6,8 @@ export class beverageCostCalculator {
 
     calculateCost() {
         let totalCost = this.beverage
-        for (let i = 0; i < this.condiments.length - 1; i++) {
-            totalCost = this.condiments[0](this.beverage)
+        for (let i = 0; i < this.condiments.length; i++) {
+            totalCost = new this.condiments[i](totalCost)
         }
         return totalCost.cost();
     }
