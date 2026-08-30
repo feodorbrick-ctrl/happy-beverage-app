@@ -6,26 +6,8 @@ export default class frappuccino extends Beverage {
         this.description = 'frappuccino'
     }
 
-    setMagnitude (magnitude) {
-        let magnitudeLowerCase = magnitude.toLowerCase();
-
-        switch (magnitudeLowerCase) {
-            case 'big':
-                this.magnitude = 'Big';
-                break;
-            case 'medium':
-                this.magnitude = 'Medium';
-                break;
-            case 'small':
-                this.magnitude = 'Small';
-                break;
-            default:
-                this.magnitude = 'Small';
-        }
-    }
-
     cost() {
-        switch (this.getMagnitude()) {
+        switch (this.getSize()) {
             case 'Small':
                 return 7.5;
             case 'Medium':

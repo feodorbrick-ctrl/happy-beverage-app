@@ -1,13 +1,13 @@
 export default class Beverage {
     description = 'Unknow Beverage'
-    magnitude = 'Medium'
+    size = 'Medium'
 
     getDescription() {
         return this.description;
     }
 
-    getMagnitude() {
-        return this.magnitude;
+    getSize() {
+        return this.size;
     }
 
     cost() {
