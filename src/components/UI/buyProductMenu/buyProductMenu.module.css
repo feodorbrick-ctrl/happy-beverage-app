@@ -27,6 +27,26 @@
     font-size: 50px;
 }
 
+.buyBtn {
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+    display: flex;
+    margin: 15px 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #DCC3AA;
+    border: navajowhite solid 4px;
+    border-radius: 10px;
+    cursor: pointer;
+    filter: brightness(1.02);
+}
+
+.buyBtn:hover {
+    transform: scale(1.01);
+    filter: brightness(0.9);
+}
+
 
 @media (max-width: 1450px) {
     .productZone {

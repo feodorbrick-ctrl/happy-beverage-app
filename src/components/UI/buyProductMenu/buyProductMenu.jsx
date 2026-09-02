@@ -7,6 +7,7 @@ import Beverage from '../../data/beverage'
 import {useLocation} from "react-router-dom";
 import {beverageCostCalculator} from "../../../frameworks/beverageCostCalculator";
 import SwitchMagnitudeBtn from "../SwitchMagnitudeBtn/SwitchMagnitudeBtn";
+import Spinner from "../spinner/spinner";
 
 const BuyProductMenu = () => {
     const {switchedBeverage} = useContext(Context)
@@ -17,6 +18,7 @@ const BuyProductMenu = () => {
     const [totalCost, setTotalCost] = useState(beverageCostCal.calculateCost());
     const [currentMagnitudeOfBeverage, setCurrentMagnitudeOfBeverage] = useState(1);
     const [magnitudeLevels] = React.useState(['Small', 'Medium', 'Big']);
+    const [isSpinnerVisible, setSpinnerVisibility] = useState(false);
 
     useEffect(() => {
         setBeverage(switchedBeverage || new Beverage)
@@ -36,12 +38,17 @@ const BuyProductMenu = () => {
         });
     }, [currentMagnitudeOfBeverage]);
 
+    function buyBeverage() {
+        setSpinnerVisibility(true)
+        setTimeout(() => setSpinnerVisibility(false), 3000);
+    }
+
     return (
         <div className={cl.productZone}>
             <div>
                 <h1>Beverage cost: <br/>{beverage.cost()}&euro;</h1>
                 <br/>
-                <h1>Total cost: <br/>{totalCost || 0 + beverage.cost()}&euro;</h1>
+                <h1>Total cost: <br/>{(totalCost ? totalCost : 0) + beverage.cost()}&euro;</h1>
             </div>
             <div className={cl.cupAndHisName}>
                 <img className={cl.coffeeImg} src={CoffeeImg}/>
@@ -53,6 +60,8 @@ const BuyProductMenu = () => {
                     />
                     <h1 className={cl.beverageNameText}>{beverage.getDescription()}</h1>
                 </div>
+                <Spinner isVisible={isSpinnerVisible}/>
+                <button onClick={buyBeverage} className={cl.buyBtn}>Buy</button>
             </div>
             <CondimentsList
                 switchedCondiments={switchedCondiments}
