@@ -1,9 +1,7 @@
-/* CoffeeShake.module.css */
-
 .shakeElement {
     position: fixed;
     top: 50%;
-    left: 58%;
+    left: 48%;
     width: 200px;
     height: 200px;
     animation: shakeRotate 0.6s ease-in-out infinite;

@@ -47,6 +47,16 @@
     filter: brightness(0.9);
 }
 
+.message {
+    width: 100%;
+    max-width: 40vw;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #F1E2D1;
+    border: #DCC3AA 5px solid;
+    box-sizing: border-box;
+}
 
 @media (max-width: 1450px) {
     .productZone {

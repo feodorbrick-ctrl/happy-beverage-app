@@ -9,11 +9,20 @@ export class beverageCostCalculator {
         this.beverage = beverage;
     }
 
+    getDecoratedBeverage() {
+        let totalCost = this.beverage
+        for (let i = 0; i < this.condiments.length; i++) {
+            totalCost = new this.condiments[i](totalCost)
+        }
+        return totalCost;
+    }
+
     calculateCost() {
         let totalCost = this.beverage
         for (let i = 0; i < this.condiments.length; i++) {
             totalCost = new this.condiments[i](totalCost)
         }
+
         return totalCost.cost();
     }
 }

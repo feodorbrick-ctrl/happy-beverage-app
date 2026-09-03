@@ -8,6 +8,7 @@ import {useLocation} from "react-router-dom";
 import {beverageCostCalculator} from "../../../frameworks/beverageCostCalculator";
 import SwitchMagnitudeBtn from "../SwitchMagnitudeBtn/SwitchMagnitudeBtn";
 import Spinner from "../spinner/spinner";
+import Modal from "../modal/modal";
 
 const BuyProductMenu = () => {
     const {switchedBeverage} = useContext(Context)
@@ -19,6 +20,7 @@ const BuyProductMenu = () => {
     const [currentMagnitudeOfBeverage, setCurrentMagnitudeOfBeverage] = useState(1);
     const [magnitudeLevels] = React.useState(['Small', 'Medium', 'Big']);
     const [isSpinnerVisible, setSpinnerVisibility] = useState(false);
+    const [isMessageVisible, setMessageVisibility] = useState(false);
 
     useEffect(() => {
         setBeverage(switchedBeverage || new Beverage)
@@ -40,7 +42,10 @@ const BuyProductMenu = () => {
 
     function buyBeverage() {
         setSpinnerVisibility(true)
-        setTimeout(() => setSpinnerVisibility(false), 3000);
+        setTimeout(() => {
+            setSpinnerVisibility(false)
+            setMessageVisibility(true)
+        }, 2000);
     }
 
     return (
@@ -48,7 +53,7 @@ const BuyProductMenu = () => {
             <div>
                 <h1>Beverage cost: <br/>{beverage.cost()}&euro;</h1>
                 <br/>
-                <h1>Total cost: <br/>{(totalCost ? totalCost : 0) + beverage.cost()}&euro;</h1>
+                <h1>Total cost: <br/>{totalCost ? totalCost : 0}&euro;</h1>
             </div>
             <div className={cl.cupAndHisName}>
                 <img className={cl.coffeeImg} src={CoffeeImg}/>
@@ -61,6 +66,9 @@ const BuyProductMenu = () => {
                     <h1 className={cl.beverageNameText}>{beverage.getDescription()}</h1>
                 </div>
                 <Spinner isVisible={isSpinnerVisible}/>
+                <Modal children={<h1 className={cl.message}>{beverageCostCal.getDecoratedBeverage().getDescription()} is bought
+                    on {beverageCostCal.calculateCost()}&euro;</h1>} visible={isMessageVisible}
+                       setVisible={setMessageVisibility}/>
                 <button onClick={buyBeverage} className={cl.buyBtn}>Buy</button>
             </div>
             <CondimentsList
