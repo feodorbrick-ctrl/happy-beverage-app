@@ -4,7 +4,7 @@ import Beans from '../../../Images/coffeeBeans.png'
 
 const Spinner = ({isVisible}) => {
     return (
-        <img src={Beans} className={cl.shakeElement} style={{display: isVisible ? 'flex' : 'none'}}/>
+        <img src={Beans} alt='Coffee Beans' className={cl.shakeElement} style={{display: isVisible ? 'flex' : 'none'}}/>
     );
 };
 

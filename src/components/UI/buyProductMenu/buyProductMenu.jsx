@@ -68,7 +68,7 @@ const BuyProductMenu = () => {
                 <h1>Total cost: <br/>{totalCost ? totalCost : 0}&euro;</h1>
             </div>
             <div className={cl.cupAndHisName}>
-                <img className={cl.coffeeImg} src={CoffeeImg}/>
+                <img className={cl.coffeeImg} src={CoffeeImg} alt='Coffee' />
                 <div>
                     <SwitchMagnitudeBtn
                         currentMagnitude={currentMagnitudeOfBeverage}
