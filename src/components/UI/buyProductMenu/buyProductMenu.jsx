@@ -26,11 +26,13 @@ const BuyProductMenu = () => {
     useEffect(() => {
         setBeverage(switchedBeverage || new Beverage())
         beverageCostCal.setBeverageAndCondiments(beverage, switchedCondiments)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [location])
     useEffect(() => {
         setCurrentMagnitudeOfBeverage(magnitudeLevels.indexOf(beverage.size))
         setTotalCost(beverageCostCal.calculateCost());
         console.log('change beverage')
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [beverage, switchedCondiments])
     useEffect(() => {
         setBeverage(prevBeverage => {
@@ -43,6 +45,7 @@ const BuyProductMenu = () => {
             switchedBeverageCost(beverage.cost())
             setTotalCost(beverageCostCal.calculateCost());
         }, 1);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentMagnitudeOfBeverage]);
 
     function buyBeverage() {
