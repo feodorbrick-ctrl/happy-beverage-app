@@ -14,7 +14,7 @@ const BuyProductMenu = () => {
     const {switchedBeverage} = useContext(Context)
     const [switchedCondiments, setSwitchedCondiments] = useState([]);
     const location = useLocation();
-    const [beverage, setBeverage] = useState(switchedBeverage || new Beverage);
+    const [beverage, setBeverage] = useState(switchedBeverage || new Beverage());
     const beverageCostCal = new beverageCostCalculator(beverage, switchedCondiments)
     const [totalCost, setTotalCost] = useState(beverageCostCal.calculateCost());
     const [currentMagnitudeOfBeverage, setCurrentMagnitudeOfBeverage] = useState(1);
@@ -24,7 +24,7 @@ const BuyProductMenu = () => {
     const [beverageCost, setBeverageCost] = useState(beverage.cost());
 
     useEffect(() => {
-        setBeverage(switchedBeverage || new Beverage)
+        setBeverage(switchedBeverage || new Beverage())
         beverageCostCal.setBeverageAndCondiments(beverage, switchedCondiments)
     }, [location])
     useEffect(() => {
