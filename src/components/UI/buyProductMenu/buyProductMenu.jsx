@@ -21,6 +21,7 @@ const BuyProductMenu = () => {
     const [magnitudeLevels] = React.useState(['Small', 'Medium', 'Big']);
     const [isSpinnerVisible, setSpinnerVisibility] = useState(false);
     const [isMessageVisible, setMessageVisibility] = useState(false);
+    const [beverageCost, setBeverageCost] = useState(beverage.cost());
 
     useEffect(() => {
         setBeverage(switchedBeverage || new Beverage)
@@ -38,6 +39,10 @@ const BuyProductMenu = () => {
             newBeverage.size = magnitudeLevels[currentMagnitudeOfBeverage];
             return newBeverage;
         });
+        setTimeout(() => {
+            switchedBeverageCost(beverage.cost())
+            setTotalCost(beverageCostCal.calculateCost());
+        }, 1);
     }, [currentMagnitudeOfBeverage]);
 
     function buyBeverage() {
@@ -48,10 +53,14 @@ const BuyProductMenu = () => {
         }, 2000);
     }
 
+    function switchedBeverageCost(beverageCost) {
+        setBeverageCost(beverageCost);
+    }
+
     return (
         <div className={cl.productZone}>
             <div>
-                <h1>Beverage cost: <br/>{beverage.cost()}&euro;</h1>
+                <h1>Beverage cost: <br/>{beverageCost}&euro;</h1>
                 <br/>
                 <h1>Total cost: <br/>{totalCost ? totalCost : 0}&euro;</h1>
             </div>
